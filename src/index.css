@@ -3,7 +3,7 @@
   min-height: 100vh;
   font-family: "Poppins", sans-serif;
   color: #f8fafc;
-  background: linear-gradient(135deg, #1e293b, #0f172a);
+  background: #000;
 }
 
 .nav {
@@ -298,4 +298,49 @@ input {
   color: #94a3b8;
   font-style: italic;
   margin: 0;
+}
+
+/* Clock Page Styles */
+.clock-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clock-display {
+  text-align: center;
+  padding: 40px;
+  max-width: 800px;
+  width: 100%;
+}
+
+.clock-display .time {
+  font-size: 8rem;
+  font-weight: 300;
+  margin: 0 0 20px 0;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.clock-display .date {
+  font-size: 1.5rem;
+  color: #cbd5e1;
+  margin: 0 0 40px 0;
+  font-weight: 400;
+}
+
+.clock-display .toggle-btn {
+  background: rgba(56, 189, 248, 0.15);
+  color: #7dd3fc;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  padding: 12px 24px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.clock-display .toggle-btn:hover {
+  background: rgba(56, 189, 248, 0.25);
+  border-color: rgba(56, 189, 248, 0.5);
 }

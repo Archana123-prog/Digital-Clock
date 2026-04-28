@@ -24,16 +24,16 @@ export default function Clock() {
 
   return (
     <motion.div
-      className="page"
+      className="page clock-page"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -50 }}
       transition={{ duration: 0.5 }}
     >
-      <div className="card">
-        <h1>{formatTime()}</h1>
-        <p>{time.toDateString()}</p>
-        <button onClick={() => setIs12h(!is12h)}>
+      <div className="clock-display">
+        <h1 className="time">{formatTime()}</h1>
+        <p className="date">{time.toDateString()}</p>
+        <button className="toggle-btn" onClick={() => setIs12h(!is12h)}>
           Toggle {is12h ? "24h" : "12h"}
         </button>
       </div>
