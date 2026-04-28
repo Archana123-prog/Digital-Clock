@@ -1,7 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { motion } from "framer-motion";
-import Lottie from "lottie-react";
-import animationData from "../assets/sandclock.json";
 
 export default function Timer() {
   const [seconds, setSeconds] = useState(() => {
@@ -125,9 +123,7 @@ export default function Timer() {
       transition={{ duration: 0.5 }}
     >
       <div className="timer-display-full">
-        <div className="timer-logo">
-          <Lottie animationData={animationData} loop={true} style={{ width: 80, height: 80 }} />
-        </div>
+        <h2>⏳ Timer</h2>
 
         <div className="timer-display">
           <span className="timer-time">{displayTime}</span>
@@ -137,34 +133,26 @@ export default function Timer() {
         </div>
 
         <div className="timer-inputs">
-          <div className="input-group">
-            <label>Minutes</label>
-            <div className="input-controls">
-              <button className="adjust-btn" onClick={() => setTimer(Math.max(0, minutes - 1), remainder)}>−</button>
-              <input
-                type="number"
-                min="0"
-                max="59"
-                value={minutes}
-                onChange={(e) => setTimer(Math.max(0, Number(e.target.value)), remainder)}
-              />
-              <button className="adjust-btn" onClick={() => setTimer(minutes + 1, remainder)}>+</button>
-            </div>
-          </div>
-          <div className="input-group">
-            <label>Seconds</label>
-            <div className="input-controls">
-              <button className="adjust-btn" onClick={() => setTimer(minutes, Math.max(0, remainder - 1))}>−</button>
-              <input
-                type="number"
-                min="0"
-                max="59"
-                value={remainder}
-                onChange={(e) => setTimer(minutes, Math.min(59, Math.max(0, Number(e.target.value))))}
-              />
-              <button className="adjust-btn" onClick={() => setTimer(minutes, Math.min(59, remainder + 1))}>+</button>
-            </div>
-          </div>
+          <label>
+            Minutes
+            <input
+              type="number"
+              min="0"
+              max="59"
+              value={minutes}
+              onChange={(e) => setTimer(Math.max(0, Number(e.target.value)), remainder)}
+            />
+          </label>
+          <label>
+            Seconds
+            <input
+              type="number"
+              min="0"
+              max="59"
+              value={remainder}
+              onChange={(e) => setTimer(minutes, Math.min(59, Math.max(0, Number(e.target.value))))}
+            />
+          </label>
         </div>
 
         <div className="timer-actions">
