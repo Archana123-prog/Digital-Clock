@@ -1,5 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { motion } from "framer-motion";
+import Lottie from "lottie-react";
+import animationData from "../assets/sandclock.json";
 
 export default function Timer() {
   const [seconds, setSeconds] = useState(() => {
@@ -124,13 +126,7 @@ export default function Timer() {
     >
       <div className="timer-display-full">
         <div className="timer-logo">
-          <div className="sand-clock">
-            <div className="hourglass">
-              <div className="top"></div>
-              <div className="middle"></div>
-              <div className="bottom"></div>
-            </div>
-          </div>
+          <Lottie animationData={animationData} loop={true} style={{ width: 80, height: 80 }} />
         </div>
 
         <div className="timer-display">
