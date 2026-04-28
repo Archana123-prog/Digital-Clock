@@ -5,8 +5,10 @@ import Clock from "./pages/Clock";
 import Alarm from "./pages/Alarm";
 import Timer from "./pages/Timer";
 import Timezone from "./pages/Timezone";
+import Loader from "./components/Loader";
 
 export default function App() {
+  const [loading, setLoading] = useState(true);
   const [alarms, setAlarms] = useState(() => {
     const saved = localStorage.getItem("alarms");
     return saved ? JSON.parse(saved) : [];
@@ -15,6 +17,12 @@ export default function App() {
   const audioRef = useRef(
     new Audio("https://actions.google.com/sounds/v1/alarms/alarm_clock.ogg")
   );
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000); // 2 sec loader
+  }, []);
 
   // Save alarms
   useEffect(() => {
@@ -50,6 +58,8 @@ export default function App() {
     return () => clearInterval(interval);
   }, [alarms]);
 
+  if (loading) return <Loader />;
+
   return (
     <BrowserRouter>
       <Navbar />
@@ -58,7 +68,7 @@ export default function App() {
         <Route path="/" element={<Clock />} />
         <Route
           path="/alarm"
-           element={<Alarm alarms={alarms} setAlarms={setAlarms} audioRef={audioRef} />}
+          element={<Alarm alarms={alarms} setAlarms={setAlarms} audioRef={audioRef} />}
         />
         <Route path="/timer" element={<Timer />} />
         <Route path="/timezone" element={<Timezone />} />

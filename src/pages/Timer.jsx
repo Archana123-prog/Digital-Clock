@@ -123,7 +123,15 @@ export default function Timer() {
       transition={{ duration: 0.5 }}
     >
       <div className="timer-display-full">
-        <h2>⏳ Timer</h2>
+        <div className="timer-logo">
+          <div className="sand-clock">
+            <div className="hourglass">
+              <div className="top"></div>
+              <div className="middle"></div>
+              <div className="bottom"></div>
+            </div>
+          </div>
+        </div>
 
         <div className="timer-display">
           <span className="timer-time">{displayTime}</span>
