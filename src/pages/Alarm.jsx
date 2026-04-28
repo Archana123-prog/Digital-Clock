@@ -30,11 +30,11 @@ export default function Alarm({ alarms, setAlarms, audioRef }) {
   }
 
   return (
-    <div className="page">
-      <div className="card">
+    <div className="page alarm-page">
+      <div className="alarm-display">
         <h2>⏰ Alarm</h2>
 
-        <button onClick={() => Notification.requestPermission()}>
+        <button onClick={() => Notification.requestPermission()} className="notification-btn">
           Enable Notifications 🔔
         </button>
 

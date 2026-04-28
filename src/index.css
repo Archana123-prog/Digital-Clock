@@ -344,3 +344,308 @@ input {
   background: rgba(56, 189, 248, 0.25);
   border-color: rgba(56, 189, 248, 0.5);
 }
+
+/* Timer Page Styles */
+.timer-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timer-display-full {
+  text-align: center;
+  padding: 40px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.timer-display-full h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #ffffff;
+}
+
+.timer-display .timer-time {
+  font-size: 6rem;
+  font-weight: 300;
+  margin: 0 0 20px 0;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.timer-display .timer-state {
+  color: #7dd3fc;
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+
+.timer-inputs {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.input-group label {
+  color: #cbd5e1;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.input-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.adjust-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(56, 189, 248, 0.08);
+  color: #7dd3fc;
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  opacity: 0.6;
+}
+
+.adjust-btn:hover {
+  background: rgba(56, 189, 248, 0.15);
+  opacity: 1;
+}
+
+.timer-inputs input {
+  width: 80px;
+  padding: 12px 8px;
+  border-radius: 8px;
+  border: none;
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: 600;
+  opacity: 0.7;
+}
+
+.timer-inputs input:focus {
+  outline: none;
+  background: rgba(255, 255, 255, 0.12);
+  opacity: 1;
+}
+
+.timer-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.timer-actions button {
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  background: rgba(56, 189, 248, 0.15);
+  color: #7dd3fc;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 80px;
+}
+
+.timer-actions button:hover:not(:disabled) {
+  background: rgba(56, 189, 248, 0.25);
+  border-color: rgba(56, 189, 248, 0.5);
+}
+
+.timer-actions button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Timer Page Styles */
+.timer-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timer-display-full {
+  text-align: center;
+  padding: 40px;
+  max-width: 800px;
+  width: 100%;
+}
+
+.timer-display-full h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #ffffff;
+}
+
+.timer-display-full .timer-display {
+  margin-bottom: 40px;
+}
+
+.timer-display-full .timer-display .timer-time {
+  font-size: 6rem;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  display: block;
+  margin-bottom: 10px;
+}
+
+.timer-display-full .timer-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 40px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.timer-display-full .timer-inputs label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #cbd5e1;
+  font-weight: 600;
+}
+
+.timer-display-full .timer-inputs input {
+  padding: 12px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #e2e8f0;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  font-size: 1.1rem;
+}
+
+.timer-display-full .timer-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.timer-display-full .timer-actions button {
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  min-width: 100px;
+}
+
+/* Timezone Page Styles */
+.timezone-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timezone-display {
+  text-align: center;
+  padding: 40px;
+  max-width: 800px;
+  width: 100%;
+}
+
+.timezone-display h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #ffffff;
+}
+
+.timezone-list {
+  display: grid;
+  gap: 20px;
+}
+
+.timezone-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+  transition: all 0.3s ease;
+}
+
+.timezone-item:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(56, 189, 248, 0.4);
+  transform: translateY(-2px);
+}
+
+.timezone-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #7dd3fc;
+}
+
+.timezone-time {
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Alarm Page Styles */
+.alarm-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.alarm-display {
+  text-align: center;
+  padding: 40px;
+  max-width: 800px;
+  width: 100%;
+}
+
+.alarm-display h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+.alarm-display .notification-btn {
+  background: rgba(56, 189, 248, 0.15);
+  color: #7dd3fc;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  padding: 12px 24px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 30px;
+}
+
+.alarm-display .notification-btn:hover {
+  background: rgba(56, 189, 248, 0.25);
+  border-color: rgba(56, 189, 248, 0.5);
+}
+
+.alarm-display .alarm-form {
+  margin-bottom: 40px;
+}
+
+.alarm-display .alarms-list-section {
+  text-align: left;
+  max-width: 600px;
+  margin: 0 auto;
+}
