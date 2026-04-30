@@ -1,10 +1,10 @@
 # ⏳ Smart Digital Clock & Timer App
 
 A modern and interactive **Digital Clock + Alarm + Timer Web App** built using **React.js** with advanced features like animations, persistent storage, and real-time updates.
+### 📱 Live Link: 
+https://digital-clock-murex-three-11.vercel.app/timer
 
 ## 🚀 Live Features
-
-https://digital-clock-murex-three-11.vercel.ap
 
 ### 🕐 Clock
 
