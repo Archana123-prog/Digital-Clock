@@ -1,14 +1,13 @@
-﻿import { useEffect, useRef, useState } from "react";
+﻿import { useEffect, useRef } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Clock from "./pages/Clock";
 import Alarm from "./pages/Alarm";
 import Timer from "./pages/Timer";
 import Timezone from "./pages/Timezone";
-import Loader from "./components/Loader";
 
 export default function App() {
-  const [loading, setLoading] = useState(true);
+  // Removed loader state to open site immediately
   const [alarms, setAlarms] = useState(() => {
     const saved = localStorage.getItem("alarms");
     return saved ? JSON.parse(saved) : [];
@@ -18,11 +17,7 @@ export default function App() {
     new Audio("https://actions.google.com/sounds/v1/alarms/alarm_clock.ogg")
   );
 
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 2000); // 2 sec loader
-  }, []);
+  // no loader timeout — app opens immediately
 
   // Save alarms
   useEffect(() => {
@@ -58,7 +53,7 @@ export default function App() {
     return () => clearInterval(interval);
   }, [alarms]);
 
-  if (loading) return <Loader />;
+  // render app immediately
 
   return (
     <BrowserRouter>
